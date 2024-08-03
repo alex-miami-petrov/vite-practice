@@ -19,3 +19,14 @@ export const getContactId = async (id) => {
     console.log(err);
   }
 };
+
+export const postContact = async (body) => {
+  try {
+    const data = await axios.post(`/contacts/`, body);
+    return data.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+
