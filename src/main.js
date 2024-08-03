@@ -1,4 +1,4 @@
-import { getAllContacts } from './js/api';
+import { getAllContacts, getContactId } from './js/api';
 
 const asyncAllContacts = async () => {
   try {
@@ -10,3 +10,14 @@ const asyncAllContacts = async () => {
 };
 
 asyncAllContacts();
+
+const asyncContactId = async () => {
+  try {
+    const awaitContactId = await getContactId(23);
+    console.log(awaitContactId);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+asyncContactId();

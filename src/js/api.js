@@ -10,3 +10,12 @@ export const getAllContacts = async () => {
     console.log(err);
   }
 };
+
+export const getContactId = async (id) => {
+  try {
+    const data = await axios.get(`/contacts/${id}`);
+    return data.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
